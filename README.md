@@ -109,3 +109,5 @@ ORDER BY	[Năm], [Tháng];
 
 ## Conclusion (Kết luận)
 Dự án đã sử dụng linh hoạt các kỹ thuật truy vấn SQL nâng cao để biến dữ liệu thô (Raw Data) thành những đề xuất chiến lược thực tế, tối ưu hóa từ khâu Marketing, Logistics đến Quản trị danh mục sản phẩm.
+
+Contact me: https://www.linkedin.com/in/harrison1502/
