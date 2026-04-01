@@ -1,14 +1,14 @@
 # Brazilian E-Commerce Business Analysis (Olist)
 
 ## Tổng Quan Dự Án
-Dự án phân tích dữ liệu thực tế từ Olist - sàn thương mại điện tử lớn nhất Brazil, với bộ dữ liệu bao gồm hơn 100,000 đơn hàng được phân bổ trong 9 bảng cơ sở dữ liệu quan hệ (Relational Database). 
-Mục tiêu của dự án là trích xuất dữ liệu, kết nối các bảng và đưa ra những góc nhìn sâu sắc về hành vi khách hàng, hiệu suất logistics và xu hướng doanh thu để hỗ trợ ra quyết định kinh doanh (Data-driven decision making).
+Dự án phân tích dữ liệu thực tế từ Olist - sàn thương mại điện tử lớn nhất Brazil, với bộ dữ liệu bao gồm hơn 100,000 đơn hàng được phân bổ trong 9 bảng cơ sở dữ liệu quan hệ. 
+Mục tiêu của dự án là trích xuất dữ liệu, kết nối các bảng và đưa ra những góc nhìn sâu sắc về hành vi khách hàng, hiệu suất logistics và xu hướng doanh thu để hỗ trợ ra quyết định kinh doanh.
 
 - **Công cụ sử dụng:** Microsoft SQL Server (SSMS)
 - **Dataset:** Brazilian E-Commerce Public Dataset by Olist (Kaggle)
 
-## Business Insights & SQL Queries (Phân tích & Truy vấn)
-### 1. Phân tích Hành vi Thanh toán (Payment Behavior)
+## Business Insights & SQL Queries
+### 1. Phân tích Hành vi Thanh toán
 **Mục tiêu:** Xác định phương thức thanh toán mang lại dòng tiền lớn nhất cho hệ thống.
 
 ```sql
@@ -22,10 +22,10 @@ ORDER BY	[Tổng Doanh Thu] DESC;
 <img width="404" height="137" alt="image" src="https://github.com/user-attachments/assets/995f7fb5-f69c-4ce7-954d-e6144579bd31" />
 
 **Insights:**
-- Giao dịch qua Thẻ tín dụng (Credit Card) chiếm tỷ trọng doanh thu cao nhất (~12.5 triệu BRL).
+- Giao dịch qua Thẻ tín dụng chiếm tỷ trọng doanh thu cao nhất (~12.5 triệu BRL).
 - Phương thức trả tiền mặt/phiếu in (Boleto) vẫn giữ vị trí thứ hai, cho thấy cần duy trì hệ thống thanh toán truyền thống này để đáp ứng đặc thù văn hóa mua sắm tại Brazil.
 
-### 2. Phân tích Địa lý & Thị trường (Geographic Analysis)
+### 2. Phân tích Địa lý & Thị trường
 **Mục tiêu:** Định vị các bang có sức mua lớn nhất để phân bổ ngân sách Marketing.
 
 ```sql
@@ -43,7 +43,7 @@ ORDER BY	[Số Lượng Đơn Hàng] DESC;
 - Đề xuất dồn trọng tâm ngân sách quảng cáo ngoài trời (Billboard) và xây dựng Tổng kho (Fulfillment Center) tại khu vực này.
 
 ### 3. Tác động của Logistics đến Trải nghiệm Khách hàng
-Mục tiêu: Đánh giá mức độ sụt giảm hài lòng (Review Score) khi giao hàng trễ hẹn.
+Mục tiêu: Đánh giá mức độ sụt giảm hài lòng khi giao hàng trễ hẹn.
 
 ```sql
 SELECT		CASE 
@@ -68,7 +68,7 @@ GROUP BY	CASE
 - Tuy nhiên, khi giao trễ, điểm số lập tức sụt giảm nghiêm trọng chỉ còn 2.28 sao.
 - Cần thiết lập SLA khắt khe hơn với các đối tác vận chuyển để bảo vệ uy tín thương hiệu.
 
-### 4. Phân tích Hiệu suất Ngành hàng (Category Performance)
+### 4. Phân tích Hiệu suất Ngành hàng
 Mục tiêu: Xác định Top 10 danh mục sản phẩm có doanh thu cao nhất.
 
 ```sql
@@ -85,9 +85,9 @@ ORDER BY	[Tổng Doanh Thu] DESC;
 
 **Insights:**
 - Các ngành hàng như Health & Beauty, Watches & Gifts mang lại doanh thu đột phá.
-- Cần đảm bảo lượng hàng tồn kho an toàn cho các nhóm này và thiết kế các chiến dịch bán chéo (Cross-selling).
+- Cần đảm bảo lượng hàng tồn kho an toàn cho các nhóm này và thiết kế các chiến dịch bán chéo.
 
-### 5. Xu hướng Doanh thu theo Thời gian (Monthly Sales Trend)
+### 5. Xu hướng Doanh thu theo Thời gian
 Mục tiêu: Theo dõi tăng trưởng doanh thu để tìm ra mùa cao điểm.
 
 ```sql
@@ -107,7 +107,7 @@ ORDER BY	[Năm], [Tháng];
 - Ghi nhận sự bùng nổ doanh thu vào Tháng 11/2017 (đỉnh điểm Black Friday).
 - Hệ thống cần chuẩn bị cơ sở hạ tầng server và kho bãi từ cuối quý 3 hàng năm để đón đầu làn sóng mua sắm cuối năm.
 
-## Conclusion (Kết luận)
-Dự án đã sử dụng linh hoạt các kỹ thuật truy vấn SQL nâng cao để biến dữ liệu thô (Raw Data) thành những đề xuất chiến lược thực tế, tối ưu hóa từ khâu Marketing, Logistics đến Quản trị danh mục sản phẩm.
+## Kết Luận
+Dự án đã sử dụng linh hoạt các kỹ thuật truy vấn SQL nâng cao để biến dữ liệu thô thành những đề xuất chiến lược thực tế, tối ưu hóa từ khâu Marketing, Logistics đến Quản trị danh mục sản phẩm.
 
 Contact me: https://www.linkedin.com/in/harrison1502/
