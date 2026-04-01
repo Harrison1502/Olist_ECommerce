@@ -4,7 +4,8 @@
 Dự án phân tích dữ liệu thực tế từ Olist - sàn thương mại điện tử lớn nhất Brazil, với bộ dữ liệu bao gồm hơn 100,000 đơn hàng được phân bổ trong 9 bảng cơ sở dữ liệu quan hệ. 
 Mục tiêu của dự án là trích xuất dữ liệu, kết nối các bảng và đưa ra những góc nhìn sâu sắc về hành vi khách hàng, hiệu suất logistics và xu hướng doanh thu để hỗ trợ ra quyết định kinh doanh.
 
-- **Công cụ sử dụng:** Microsoft SQL Server (SSMS)
+- **Công cụ:** Microsoft SQL Server (SSMS)
+- **Trực quan:** Microsoft PowerBI
 - **Dataset:** Brazilian E-Commerce Public Dataset by Olist (Kaggle)
 
 ## Business Insights & SQL Queries
@@ -107,7 +108,22 @@ ORDER BY	[Năm], [Tháng];
 - Ghi nhận sự bùng nổ doanh thu vào Tháng 11/2017 (đỉnh điểm Black Friday).
 - Hệ thống cần chuẩn bị cơ sở hạ tầng server và kho bãi từ cuối quý 3 hàng năm để đón đầu làn sóng mua sắm cuối năm.
 
+### 6. Trực quan hóa bằng Microsoft PowerBI
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/21729eb2-75fd-4d37-95ed-68b0efcdbd30" />
+
+**Tổng quan Tài chính & Bán hàng**
+- Nền tảng ghi nhận mức doanh thu ấn tượng 16.01 triệu BRL từ 99 ngàn đơn hàng, duy trì Giá trị Đơn hàng Trung bình (AOV) ổn định ở mức 160.99 BRL. Thẻ tín dụng là phương thức thanh toán áp đảo tuyệt đối, chiếm 78.34% tổng lượng giao dịch.
+- **Đề xuất:** Hợp tác với các tổ chức tài chính để tung ra các gói trả góp qua Thẻ tín dụng hoặc hoàn tiền nhằm tiếp tục đẩy mạnh giá trị đơn hàng
+
+**Ma trận Sản phẩm & Tính mùa vụ**
+- Ngành hàng "Sức khỏe & Sắc đẹp" và "Đồng hồ & Quà tặng" đóng vai trò là "gà đẻ trứng vàng", mang lại cả số lượng bán ra lẫn doanh thu khổng lồ. Bên cạnh đó, xu hướng doanh thu hàng tháng cho thấy sự tăng trưởng mạnh vào giai đoạn giữa năm (Tháng 5 - Tháng 8) và có biến động vào cuối năm.
+- **Đề xuất:** Phòng Thu mua cần ưu tiên tích trữ hàng hóa cho các ngành hàng top đầu trước giai đoạn cao điểm giữa năm để tránh tình trạng cháy hàng.
+
+**Thị trường & Hiệu suất vận hành**
+- Tệp khách hàng tập trung dày đặc tại khu vực Đông Nam Brazil (chủ yếu là São Paulo). Đáng chú ý, có một sự tương quan trực tiếp giữa hiệu suất giao hàng và mức độ hài lòng của khách: Đơn giao đúng hạn đạt trung bình ~4.3 sao, trong khi đơn giao trễ khiến đánh giá rớt thê thảm xuống ~2.5 sao.
+- **Đề xuất:** Tối ưu hóa chuỗi cung ứng và thiết lập các trung tâm xử lý đơn hàng nội khu tại São Paulo để đảm bảo cam kết thời gian giao hàng (SLA), vì khâu vận hành quyết định trực tiếp đến việc giữ chân khách hàng.
+
 ## Kết Luận
-Dự án đã sử dụng linh hoạt các kỹ thuật truy vấn SQL nâng cao để biến dữ liệu thô thành những đề xuất chiến lược thực tế, tối ưu hóa từ khâu Marketing, Logistics đến Quản trị danh mục sản phẩm.
+Dự án đã sử dụng linh hoạt các kỹ thuật truy vấn SQL và Trực quan hóa dữ liệu bằng PowerBI để biến dữ liệu thô thành những đề xuất chiến lược thực tế, tối ưu hóa từ khâu Marketing, Logistics đến Quản trị danh mục sản phẩm.
 
 Contact me: https://www.linkedin.com/in/harrison1502/
